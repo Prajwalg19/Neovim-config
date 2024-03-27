@@ -1,0 +1,35 @@
+{
+    "coc.source.html.customData": {
+        "tags": {
+            "prefix": "!",
+            "version": 1.1,
+            "tags": [
+                {
+                    "name": "div",
+                    "description": "The div element represents a generic document or application section."
+                },
+                {
+                    "name": "span",
+                    "description": "The span element is an inline-level generic container for phrasing content."
+                }
+            ]
+        }
+    },
+    "emmet.includeLanguages": {
+        "vue-html": "html",
+        "javascript": "javascriptreact",
+        "tailwindcss": "javascriptreact",
+        "tailwindcss" :"typescriptreact"
+    },
+    "coc.preferences.formatOnSaveFiletypes": ["*"],
+    "coc.preferences.useTab": false,
+    "coc.preferences.acceptSuggestionOnEnter": "always",
+    "snippets.ultisnips.pythonPrompt": false,
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-19",
+            "path": "/usr/lib/jvm/java-1.19.0-openjdk-amd64",
+            "default": true
+        }
+    ]
+}

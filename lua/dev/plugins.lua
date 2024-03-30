@@ -34,7 +34,7 @@ use({
     "https://github.com/nvim-tree/nvim-tree.lua",
     lazy=true
 })
-	use("ryanoasis/vim-devicons")
+	-- use("ryanoasis/vim-devicons")
 
 	-- Tim Pope Plugins --
 	use("tpope/vim-surround")
@@ -67,14 +67,14 @@ use({
      })
      use "nvim-lua/plenary.nvim" 
 
-use {
-  'themaxmarchuk/tailwindcss-colors.nvim',
-  lazy=true,
-  module = "tailwindcss-colors",
-  config = function()
-    require("tailwindcss-colors").setup{}
-  end
-}
+-- use {
+--   'themaxmarchuk/tailwindcss-colors.nvim',
+--   lazy=true,
+--   module = "tailwindcss-colors",
+--   config = function()
+--     require("tailwindcss-colors").setup{}
+--   end
+-- }
 
 	if packer_bootstrap then
 		packer.sync()

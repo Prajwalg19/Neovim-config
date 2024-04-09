@@ -6,6 +6,8 @@ local opt = vim.opt
 -- cmd('syntax on')
 -- vim.api.nvim_command('filetype plugin indent on')
 
+g.loaded_netrw = 1
+g.loaded_netrwPlugin = 1
 o.termguicolors = true
 -- o.background = 'dark'
 
@@ -88,7 +90,12 @@ g.maplocalleader = " "
 
 -- nvim tree
 require("nvim-tree").setup({
-  sort_by = "case_sensitive",
+  update_focused_file = {
+  enable = true,
+  update_root = true,
+   }  ,
+  view = {relativenumber = true},
+  sort_by = "modification_time",
   renderer = {
     group_empty = true,
   },
@@ -161,3 +168,27 @@ end
 -- local on_attach = function(client, bufnr)
 --   require("tailwindcss-colors").buf_attach(bufnr)
 -- end
+
+require("conform").setup({
+  formatters_by_ft = {
+    -- Use a sub-list to run only the first available formatter
+    javascript = { { "prettierd", "prettier" } },
+    java = {  "astyle" },
+    typescript={"prettierd"},
+    html={{"prettierd"}},
+    c={"astyle"},
+    cpp ={"astyle"},
+    tsx={"prettierd"},
+    jsx={"prettierd"},
+  },
+})
+
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  callback = function(args)
+    require("conform").format({ bufnr = args.buf })
+  end,
+})
+
+require("telescope").load_extension("persisted")

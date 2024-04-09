@@ -19,54 +19,73 @@ packer.startup(function(use)
 	-- Dashboard is a nice start screen for nvim
 
 	-- Telescope
-	use({
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.0",
+ use({
+ 'nvim-telescope/telescope.nvim', tag = '0.1.4' ,
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
-	use("nvim-treesitter/nvim-treesitter") -- Treesitter Syntax Highlighting
+ use("nvim-treesitter/nvim-treesitter") -- Treesitter Syntax Highlighting
 
-	use("nvim-lualine/lualine.nvim") -- A better statusline
+ use("nvim-lualine/lualine.nvim") -- A better statusline
 
 	-- File management --
-use({
+ use({
     "https://github.com/nvim-tree/nvim-tree.lua",
-    lazy=true
 })
 	-- use("ryanoasis/vim-devicons")
 
 	-- Tim Pope Plugins --
-	use("tpope/vim-surround")
+ use("tpope/vim-surround")
 
 	-- Syntax Highlighting and Colors --
-	use("ap/vim-css-color")
+ use("ap/vim-css-color")
 
-    use({ "https://github.com/folke/tokyonight.nvim.git",
+ --Colorscheme
+ use({ "https://github.com/folke/tokyonight.nvim.git",
     lazy=true,
 })
 
-use({
+--LSP
+ use({
   "neoclide/coc.nvim",
   lazy = true,
 })
 
+--Comment plugin
  use({
      "tpope/vim-commentary",
      lazy=true
  })
-     use("jiangmiao/auto-pairs")
-     use("prettier/vim-prettier")
+ 
+-- Bracket,tags,paranthesis pairing
+ use("jiangmiao/auto-pairs")
+     -- use("prettier/vim-prettier")
+
+     --Icons
  use({
      'nvim-tree/nvim-web-devicons',
      lazy=true
  })
-     use({
+
+ --Undo history
+ use({
          'https://github.com/mbbill/undotree',
          lazy=true
      })
-     use "nvim-lua/plenary.nvim" 
 
+ use "nvim-lua/plenary.nvim" 
+
+ --Formatter
+ use "https://github.com/stevearc/conform.nvim"
+ 
+
+ -- Session Plugin 
+use({
+  "olimorris/persisted.nvim",
+  config = function()
+    require("persisted").setup()
+  end,
+})
 -- use {
 --   'themaxmarchuk/tailwindcss-colors.nvim',
 --   lazy=true,

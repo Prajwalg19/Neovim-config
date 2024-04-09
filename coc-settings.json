@@ -19,7 +19,7 @@
         "vue-html": "html",
         "javascript": "javascriptreact",
         "tailwindcss": "javascriptreact",
-        "tailwindcss" :"typescriptreact"
+        "tailwindcss": "typescriptreact"
     },
     "coc.preferences.formatOnSaveFiletypes": ["*"],
     "coc.preferences.useTab": false,

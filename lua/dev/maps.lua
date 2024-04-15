@@ -93,5 +93,8 @@ vim.api.nvim_set_var('floaterm_keymap_toggle', '<Space>fa')
  vim.api.nvim_set_keymap('i', '<C-f>', 'coc#float#has_scroll() ? "\\<c-r>=coc#float#scroll(1, 1)\\<cr>" : "\\<Right>"', { noremap = true, expr = true, nowait = true })
  vim.api.nvim_set_keymap('i', '<C-b>', 'coc#float#has_scroll() ? "\\<c-r>=coc#float#scroll(0, 1)\\<cr>" : "\\<Left>"', { noremap = true, expr = true, nowait = true })
 vim.api.nvim_set_keymap("i", '<CR>' , 'coc#pum#visible() ? coc#pum#confirm() : "\\<CR>"', {expr=true, noremap=true,silent=true})
+vim.api.nvim_set_keymap('n', '<S-K>', '<cmd>lua vim.fn.CocActionAsync("doHover")<CR>', { noremap = true, silent = true })
+-- Remove the mapping for a default keybinding
 
-
+ vim.api.nvim_set_keymap('n', '<C-f>', 'coc#float#has_scroll() ? "\\<c-r>=coc#float#scroll(1, 1)\\<cr>" : "\\<Right>"', { noremap = false, expr = true, nowait = true })
+ vim.api.nvim_set_keymap('n', '<C-b>', 'coc#float#has_scroll() ? "\\<c-r>=coc#float#scroll(0, 1)\\<cr>" : "\\<Left>"', { noremap = true, expr = true, nowait = true })

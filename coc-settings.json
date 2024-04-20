@@ -1,0 +1,52 @@
+{
+    "suggest.insertMode": "replace",
+    "colors.enable": true,
+    "coc.preferences.bracketEnterImprove": true,
+    "diagnostic.checkCurrentLine": true,
+    "coc.preferences.currentFunctionSymbolAutoUpdate": true,
+    "java.showBuildStatusOnStart.enabled": "notification",
+    "Lua.window.statusBar": true,
+    "java.autobuild.enabled": true,
+    "java.format.enabled": true,
+    "java.completion.enabled": true,
+    "java.jdt.ls.statusIcons": null,
+    "tailwindCSS.hovers": true,
+    "emmet.includeLanguages": {
+        "vue-html": "html",
+        "javascript": "javascriptreact",
+        "tailwindcss": [
+            "javascriptreact",
+            "typescriptreact"
+        ]
+    },
+    "coc.preferences.formatOnSave": true,
+    "dialog.confirmKey": "<cr>",
+    "notification.border": true,
+    "workspace.workspaceFolderFallbackCwd": true,
+    "suggest.snippetsSupport": true,
+    "javascript.preferences.renameMatchingJsxTags": true,
+    "dialog.rounded": true,
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-19",
+            "path": "/usr/lib/jvm/java-19-openjdk-amd64",
+            "default": true
+        }
+    ],
+    "java.jdt.ls.java.home": "/usr/lib/jvm/java-19-openjdk-amd64",
+    "languageserver": {
+        "lua": {
+            "command": "lua-lsp",
+            "filetypes": [
+                "lua"
+            ],
+            "settings": {
+                "Lua": {
+                    "workspace": {
+                        "checkThirdParty": false
+                    }
+                }
+            }
+        }
+    }
+}

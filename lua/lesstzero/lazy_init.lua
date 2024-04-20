@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     spec = "lesstzero.lazy",
-    change_detection = { notify = true },
+    change_detection = { notify = false },
     performance = {
         cache = {
             enabled = true,

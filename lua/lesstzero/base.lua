@@ -1,10 +1,10 @@
-
 local g = vim.g
 local o = vim.o
 local opt = vim.opt
 -- cmd('syntax on')
 -- vim.api.nvim_command('filetype plugin indent on')
 
+o.signcolumn = "yes"
 -- Map <leader> to space
 g.mapleader = " "
 g.loaded_netrw = 1
@@ -70,4 +70,5 @@ o.splitbelow = true
 
 -- lower the lualine
 o.cmdheight = 0
-
+-- this is a quick scope config , i am placing this here because it only works when this is applied in the init files
+vim.cmd("let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']")

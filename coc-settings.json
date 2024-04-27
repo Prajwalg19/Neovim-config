@@ -1,4 +1,11 @@
 {
+    "typescript.preferences.renameMatchingJsxTags": true,
+    "typescript.preferences.jsxAttributeCompletionStyle": "auto",
+    "javascript.autoClosingTags": true,
+    "typescript.autoClosingTags": true,
+    "suggest.autoTrigger": "always",
+    "html.autoClosingTags": true,
+    "java.server.launchMode": "Standard",
     "suggest.insertMode": "replace",
     "colors.enable": true,
     "coc.preferences.bracketEnterImprove": true,
@@ -6,10 +13,7 @@
     "coc.preferences.currentFunctionSymbolAutoUpdate": true,
     "java.showBuildStatusOnStart.enabled": "notification",
     "Lua.window.statusBar": true,
-    "java.autobuild.enabled": true,
     "java.format.enabled": true,
-    "java.completion.enabled": true,
-    "java.jdt.ls.statusIcons": null,
     "tailwindCSS.hovers": true,
     "emmet.includeLanguages": {
         "vue-html": "html",
@@ -36,10 +40,6 @@
     "java.jdt.ls.java.home": "/usr/lib/jvm/java-19-openjdk-amd64",
     "languageserver": {
         "lua": {
-            "command": "lua-lsp",
-            "filetypes": [
-                "lua"
-            ],
             "settings": {
                 "Lua": {
                     "workspace": {

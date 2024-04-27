@@ -1,7 +1,7 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    lazy=false,
+    event = 'BufEnter',
     config = function()
         require("nvim-treesitter.configs").setup({
             -- A list of parser names, or "all"

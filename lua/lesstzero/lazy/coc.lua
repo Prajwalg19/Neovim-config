@@ -1,7 +1,7 @@
 return {
     "neoclide/coc.nvim",
     -- ft = { "java", "javascript", "typescript", "lua", "c", "jsx", "tsx", "css", "html" },
-    lazy = false,
+    event = 'BufEnter',
     config = function()
         local keyset = vim.keymap.set
         local opts = { silent = true, nowait = true, expr = true }
@@ -97,6 +97,10 @@ return {
         end
 
         remap('i', '<CR>', 'v:lua.MUtils.completion_confirm()', { expr = true, noremap = true })
+        --  vim.cmd([[
+        --    autocmd FileType javascript setlocal cocu_regexps='javascriptreact:\s*\(\k\|$\w\)\+\|\%(\k\|$\w\)\+\%'
+        --  ]])
+        --end
     end
 
 }
